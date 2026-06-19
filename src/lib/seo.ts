@@ -156,10 +156,6 @@ export function createHomeHead(): DocumentHeadValue {
       { rel: "canonical", href: `${SITE.origin}/` },
       { rel: "alternate", href: `${SITE.origin}/`, hreflang: "en" },
       { rel: "alternate", href: `${SITE.origin}/`, hreflang: "x-default" },
-      { rel: "manifest", href: "/site.webmanifest" },
-      { rel: "icon", href: "/icons/icon32.png", type: "image/png", sizes: "32x32" },
-      { rel: "icon", href: "/icons/icon16.png", type: "image/png", sizes: "16x16" },
-      { rel: "apple-touch-icon", href: "/icons/icon128.png", sizes: "128x128" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
       {

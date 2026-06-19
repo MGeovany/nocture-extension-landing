@@ -18,6 +18,10 @@ export default component$(() => {
           content="black-translucent"
         />
         <meta name="apple-mobile-web-app-title" content={SITE.name} />
+        <link rel="icon" href="/icons/icon32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/icons/icon16.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/icons/icon128.png" sizes="128x128" />
+        <link rel="manifest" href="/site.webmanifest" />
         <RouterHead />
       </head>
       <body>
