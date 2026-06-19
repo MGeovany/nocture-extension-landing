@@ -1,0 +1,28 @@
+{
+  "name": "404am-landing",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build.client && npm run build.server",
+    "build.client": "vite build",
+    "build.server": "vite build -c adapters/static/vite.config.ts",
+    "typecheck": "tsc --incremental --noEmit",
+    "dev": "vite --mode ssr",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.12.0",
+    "@builder.io/qwik-city": "^1.12.0",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "undici": "^6.21.2"
+    }
+  }
+}
