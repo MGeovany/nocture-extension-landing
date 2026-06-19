@@ -383,6 +383,7 @@ export default component$(() => {
             Built because tab-hopping through DevTools is no fun
           </span>
           <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
           <a href={LINKS.github} target="_blank" rel="noreferrer">
             GitHub
           </a>

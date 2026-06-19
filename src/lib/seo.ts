@@ -19,8 +19,7 @@ export const SITE = {
   },
   github: "https://github.com/MGeovany/404-AM",
   githubIssues: "https://github.com/MGeovany/404-AM/issues",
-  privacyPolicy:
-    "https://github.com/MGeovany/404-AM/blob/main/PRIVACY.md",
+  privacyPolicy: "https://404am.thefndrs.com/privacy/",
   marketingUrl: "https://404am.thefndrs.com/",
   supportUrl: "https://404am.thefndrs.com/support/",
   firefox:

@@ -64,12 +64,7 @@ export default component$(() => {
               <span class="support-link">View on GitHub →</span>
             </a>
 
-            <a
-              class="support-card"
-              href={SITE.privacyPolicy}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a class="support-card" href="/privacy/">
               <h2>Privacy policy</h2>
               <p>
                 404-AM does not collect or transmit user data. Read the full
