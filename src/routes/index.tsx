@@ -133,6 +133,44 @@ const DEFAULT_CTA: BrowserCta = {
   variant: "edge",
 };
 
+const INSTALL_OPTIONS: BrowserCta[] = [
+  {
+    href: LINKS.edge,
+    logo: EDGE_LOGO,
+    variant: "edge",
+    label: "Add Nocturne to Microsoft Edge",
+    sub: "Available on Microsoft Edge Add-ons",
+  },
+  {
+    href: LINKS.safari,
+    logo: SAFARI_LOGO,
+    variant: "safari",
+    label: "Get Nocturne for Safari",
+    sub: "Available on the Mac App Store",
+  },
+  {
+    href: LINKS.github,
+    logo: CHROME_LOGO,
+    variant: "chrome",
+    label: "Nocturne for Chrome coming soon",
+    sub: "Download from GitHub for now",
+  },
+  {
+    href: LINKS.github,
+    logo: FIREFOX_LOGO,
+    variant: "firefox",
+    label: "Nocturne for Firefox coming soon",
+    sub: "Download from GitHub for now",
+  },
+  {
+    href: LINKS.github,
+    logo: OPERA_LOGO,
+    variant: "opera",
+    label: "Nocturne for Opera coming soon",
+    sub: "Download from GitHub for now",
+  },
+];
+
 function browserCta(userAgent: string): BrowserCta {
   const isEdge = /Edg\//.test(userAgent);
   const isOpera = /OPR\//.test(userAgent) || /Opera\//.test(userAgent);
@@ -285,41 +323,16 @@ export default component$(() => {
                 label={detectedCta.value.label}
                 sub={detectedCta.value.sub}
               />
-              <BrowserInstall
-                href={LINKS.edge}
-                logo={EDGE_LOGO}
-                variant="edge"
-                label="Add Nocturne to Microsoft Edge"
-                sub="Available on Microsoft Edge Add-ons"
-              />
-              <BrowserInstall
-                href={LINKS.safari}
-                logo={SAFARI_LOGO}
-                variant="safari"
-                label="Get Nocturne for Safari"
-                sub="Available on the Mac App Store"
-              />
-              <BrowserInstall
-                href={LINKS.github}
-                logo={CHROME_LOGO}
-                variant="chrome"
-                label="Nocturne for Chrome coming soon"
-                sub="Download from GitHub for now"
-              />
-              <BrowserInstall
-                href={LINKS.github}
-                logo={FIREFOX_LOGO}
-                variant="firefox"
-                label="Nocturne for Firefox coming soon"
-                sub="Download from GitHub for now"
-              />
-              <BrowserInstall
-                href={LINKS.github}
-                logo={OPERA_LOGO}
-                variant="opera"
-                label="Nocturne for Opera coming soon"
-                sub="Download from GitHub for now"
-              />
+              {INSTALL_OPTIONS.filter((option) => option.variant !== detectedCta.value.variant).map((option) => (
+                <BrowserInstall
+                  key={option.variant}
+                  href={option.href}
+                  logo={option.logo}
+                  variant={option.variant}
+                  label={option.label}
+                  sub={option.sub}
+                />
+              ))}
             </div>
           </div>
           <AppPreview />

@@ -86,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex: 0 0 auto;
 }
 
 .app-preview .brand-icon {
@@ -104,7 +105,9 @@
 .app-preview .sidebar-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+  flex: 0 0 auto;
+  margin-left: 14px;
 }
 
 .app-preview .count {
